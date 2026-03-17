@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --puro-black: #000000;
+  --puro-white: #ffffff;
+  --puro-green: #73ad48;
+  --puro-green-hover: #5f9a3a;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--puro-black);
+  background: var(--puro-white);
+}
+
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
