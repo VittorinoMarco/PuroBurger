@@ -1,19 +1,24 @@
-"use client";
+const DEFAULTS = [
+  "N°1 dello Smash Burger",
+  "100% Scottona Italiana",
+  "Zero additivi · Zero conservanti",
+  "Macinata ogni giorno · Mai congelata",
+  "Brioche a lievitazione naturale",
+  "Nessun compromesso",
+];
 
-const MARQUEE_TEXT =
-  "100% SCOTTONA · ZERO ADDITIVI · #SMASHALTÒ · SOLO CARNE ITALIANA · FRESCO OGNI GIORNO ·";
-
-export default function MarqueeStrip() {
+export function MarqueeStrip({ items = DEFAULTS }: { items?: string[] }) {
+  const loop = [...items, ...items];
   return (
-    <div className="overflow-hidden bg-puro-green py-4">
-      <div className="flex animate-marquee whitespace-nowrap">
-        {[...Array(4)].map((_, i) => (
+    <div className="relative overflow-hidden border-y border-puro-border bg-puro-panel py-6 sm:py-7">
+      <div className="flex gap-12 animate-marquee whitespace-nowrap">
+        {loop.map((label, i) => (
           <span
             key={i}
-            className="mx-8 font-bold uppercase text-puro-cream text-sm md:text-base tracking-wider"
+            className="flex items-center gap-3 text-xs uppercase tracking-[0.25em] text-white/60"
           >
-            {MARQUEE_TEXT}
-            <span className="mx-4 text-puro-green">•</span>
+            <span className="h-1.5 w-1.5 rounded-full bg-puro-green" />
+            {label}
           </span>
         ))}
       </div>

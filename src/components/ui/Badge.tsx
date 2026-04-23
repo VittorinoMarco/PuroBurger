@@ -1,30 +1,29 @@
-type BadgeVariant = "smashAlto" | "vegetariano" | "piccante" | "signature";
+import clsx from "clsx";
+import type { ReactNode } from "react";
 
-interface BadgeProps {
-  variant: BadgeVariant;
+type Props = {
+  children: ReactNode;
+  tone?: "green" | "red" | "white" | "dark";
   className?: string;
-}
-
-const variantStyles: Record<BadgeVariant, string> = {
-  smashAlto: "bg-puro-olive text-puro-cream",
-  vegetariano: "bg-puro-green text-white",
-  piccante: "bg-puro-red text-white",
-  signature: "bg-puro-green/20 text-puro-green border border-puro-green",
 };
 
-const variantLabels: Record<BadgeVariant, string> = {
-  smashAlto: "#SmashAlto",
-  vegetariano: "🌿 Vegetariano",
-  piccante: "🌶 Piccante",
-  signature: "⭐ Signature",
+const tones = {
+  green: "bg-puro-green text-black",
+  red: "bg-puro-red text-white",
+  white: "bg-white text-black",
+  dark: "bg-black/70 text-white border border-white/10 backdrop-blur",
 };
 
-export default function Badge({ variant, className = "" }: BadgeProps) {
+export function Badge({ children, tone = "green", className }: Props) {
   return (
     <span
-      className={`inline-flex items-center px-2 py-0.5 rounded text-xs font-medium uppercase tracking-wide ${variantStyles[variant]} ${className}`}
+      className={clsx(
+        "inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider",
+        tones[tone],
+        className
+      )}
     >
-      {variantLabels[variant]}
+      {children}
     </span>
   );
 }

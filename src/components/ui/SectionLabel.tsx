@@ -1,14 +1,21 @@
-interface SectionLabelProps {
+import clsx from "clsx";
+
+export function SectionLabel({
+  children,
+  className,
+}: {
   children: React.ReactNode;
   className?: string;
-}
-
-export default function SectionLabel({ children, className = "" }: SectionLabelProps) {
+}) {
   return (
-    <span
-      className={`block uppercase font-medium text-[11px] tracking-[0.2em] text-puro-green mb-2 ${className}`}
+    <div
+      className={clsx(
+        "inline-flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.22em] text-puro-green",
+        className
+      )}
     >
+      <span className="block h-px w-6 bg-puro-green" />
       {children}
-    </span>
+    </div>
   );
 }

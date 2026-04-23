@@ -1,112 +1,114 @@
 import Link from "next/link";
-import Image from "next/image";
-import { Instagram, Facebook } from "lucide-react";
-import { NAV_LINKS, CONTACT, HOURS } from "@/lib/constants";
+import { Instagram, Facebook, Mail, MapPin, Phone } from "lucide-react";
+import { Logo } from "./Logo";
+import { SITE } from "@/lib/site";
 
-export default function Footer() {
+const MENU = [
+  { label: "I Nostri Smash", href: "/menu#smash" },
+  { label: "Sides & Drinks", href: "/menu#sides" },
+  { label: "Dolci", href: "/menu#dolci" },
+  { label: "Combo 15€ (lun–gio)", href: "/#combo" },
+];
+
+const AZIENDA = [
+  { label: "Chi Siamo", href: "/chi-siamo" },
+  { label: "Il processo", href: "/chi-siamo#processo" },
+  { label: "Lavora con noi", href: "/contatti" },
+];
+
+const SUPPORTO = [
+  { label: "Contatti", href: "/contatti" },
+  { label: "Allergeni", href: "/contatti#allergeni" },
+  { label: "Privacy Policy", href: "/privacy" },
+  { label: "Termini e Condizioni", href: "/termini" },
+];
+
+export function Footer() {
   return (
-    <footer className="bg-black py-16 md:py-20">
-      <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
-          {/* Col 1: Logo + tagline */}
-          <div>
-            <Image
-              src="/LogoPuroBurger.png"
-              alt="Puro Burger"
-              width={120}
-              height={48}
-              className="h-10 w-auto"
-            />
-            <p className="mt-2 text-white/80 text-sm">
-              N°1 dello SmashAlto
+    <footer className="border-t border-puro-border bg-puro-ink">
+      <div className="container mx-auto py-16 sm:py-20 lg:py-24">
+        <div className="grid grid-cols-2 gap-10 sm:gap-12 lg:grid-cols-5 lg:gap-14">
+          <div className="col-span-2 lg:col-span-2 space-y-5">
+            <Logo />
+            <div className="flex flex-wrap gap-2">
+              <span className="inline-flex items-center gap-1.5 text-[11px] uppercase tracking-[0.14em] font-bold bg-puro-green text-black px-3 py-1.5 rounded-full">
+                N°1 dello Smash Burger
+              </span>
+              <span className="inline-flex items-center gap-1.5 text-[11px] uppercase tracking-[0.14em] font-bold bg-puro-green/10 text-puro-green border border-puro-green/30 px-3 py-1.5 rounded-full">
+                100% scottona · Zero additivi
+              </span>
+            </div>
+            <p className="text-sm text-white/55 max-w-sm">
+              Smash di sola scottona italiana, macinata ogni mattina in
+              cucina. Zero conservanti, zero coloranti, nessun compromesso.
+              Dal 2019 a Scalea.
             </p>
-            <p className="text-white/70 text-sm">100% Scottona · Zero Additivi</p>
-            <div className="flex gap-4 mt-4">
+            <div className="space-y-2 text-sm text-white/70">
               <a
-                href={CONTACT.instagramUrl}
+                href={SITE.social.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white/70 hover:text-puro-green transition-colors min-w-[44px] min-h-[44px] flex items-center"
-                aria-label="Instagram"
+                className="inline-flex items-center gap-2 hover:text-puro-green"
               >
-                <Instagram size={24} />
+                <Instagram className="h-4 w-4" /> @puroburger
               </a>
               <a
-                href={CONTACT.facebookUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-white/70 hover:text-puro-green transition-colors min-w-[44px] min-h-[44px] flex items-center"
-                aria-label="Facebook"
+                href={`mailto:${SITE.email}`}
+                className="flex items-center gap-2 hover:text-puro-green"
               >
-                <Facebook size={24} />
+                <Mail className="h-4 w-4" /> {SITE.email}
               </a>
               <a
-                href={CONTACT.tiktokUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-white/70 hover:text-puro-green transition-colors min-w-[44px] min-h-[44px] flex items-center"
-                aria-label="TikTok"
+                href={`tel:${SITE.phone.replace(/\s/g, "")}`}
+                className="flex items-center gap-2 hover:text-puro-green"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
-                </svg>
+                <Phone className="h-4 w-4" /> {SITE.phone}
               </a>
+              <p className="flex items-start gap-2">
+                <MapPin className="h-4 w-4 mt-0.5" />
+                <span>{SITE.address}</span>
+              </p>
             </div>
           </div>
 
-          {/* Col 2: Naviga */}
-          <div>
-            <h3 className="font-semibold text-white mb-4">Naviga</h3>
-            <ul className="space-y-2">
-              {NAV_LINKS.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-white/70 hover:text-puro-green transition-colors"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Col 3: Contatti */}
-          <div>
-            <h3 className="font-semibold text-white mb-4">Contatti</h3>
-            <p className="text-white/70">{CONTACT.location}</p>
-            <a
-              href={`tel:${CONTACT.phone}`}
-              className="text-white/70 hover:text-puro-green transition-colors block mt-2"
-            >
-              {CONTACT.phoneFormatted}
-            </a>
-            <p className="text-white/70 mt-2 text-sm">{HOURS.short}</p>
-          </div>
-
-          {/* Col 4: Seguici */}
-          <div>
-            <h3 className="font-semibold text-white mb-4">Seguici</h3>
-            <p className="text-white/70 text-sm">{CONTACT.instagram}</p>
-            <p className="text-white/70 text-sm mt-1">Facebook / TikTok</p>
-          </div>
+          <FooterColumn title="Menu" links={MENU} />
+          <FooterColumn title="Azienda" links={AZIENDA} />
+          <FooterColumn title="Supporto" links={SUPPORTO} />
         </div>
 
-        <div className="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4 text-white/60 text-sm">
-          <span>© 2026 Puro Burger · Scalea (CS) · P.IVA: [placeholder]</span>
-          <span>Made by Marco Vittorino</span>
+        <div className="mt-16 flex flex-col items-start justify-between gap-4 border-t border-white/5 pt-8 text-xs text-white/40 sm:flex-row sm:items-center lg:mt-20 lg:pt-10">
+          <p>© {new Date().getFullYear()} Puro Burger. Tutti i diritti riservati.</p>
+          <p>
+            Carne pura. Gesto preciso.{" "}
+            <span className="text-puro-green">Ogni volta.</span>
+          </p>
         </div>
       </div>
     </footer>
+  );
+}
+
+function FooterColumn({
+  title,
+  links,
+}: {
+  title: string;
+  links: { label: string; href: string }[];
+}) {
+  return (
+    <div>
+      <h3 className="text-[11px] font-bold uppercase tracking-[0.22em] text-puro-green mb-4">
+        {title}
+      </h3>
+      <ul className="space-y-2.5 text-sm text-white/65">
+        {links.map((l) => (
+          <li key={l.href}>
+            <Link href={l.href} className="hover:text-white transition-colors">
+              {l.label}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }

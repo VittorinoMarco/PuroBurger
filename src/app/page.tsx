@@ -1,25 +1,29 @@
-import HeroSection from "@/components/sections/HeroSection";
-import MarqueeStrip from "@/components/ui/MarqueeStrip";
-import InfoCards from "@/components/sections/InfoCards";
-import LaNostraStoriaSection from "@/components/sections/LaNostraStoriaSection";
-import NumeriSection from "@/components/sections/NumeriSection";
-import BurgerPreviewSection from "@/components/sections/BurgerPreviewSection";
-import PuroSpritz from "@/components/sections/PuroSpritz";
-import SmashAltoSection from "@/components/sections/SmashAltoSection";
-import DoveSiamoSection from "@/components/sections/DoveSiamoSection";
+import { Hero } from "@/components/sections/Hero";
+import { MarqueeStrip } from "@/components/ui/MarqueeStrip";
+import { PressStrip } from "@/components/sections/PressStrip";
+import { SmashShowcase } from "@/components/sections/SmashShowcase";
+import { Features } from "@/components/sections/Features";
+import { Manifesto } from "@/components/sections/Manifesto";
+import { Process } from "@/components/sections/Process";
+import { ComboBanner } from "@/components/sections/ComboBanner";
+import { Testimonials } from "@/components/sections/Testimonials";
+import { FAQ } from "@/components/sections/FAQ";
+import { FinalCTA } from "@/components/sections/FinalCTA";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <main>
-      <HeroSection />
+    <>
+      <Hero />
       <MarqueeStrip />
-      <InfoCards />
-      <LaNostraStoriaSection />
-      <NumeriSection />
-      <BurgerPreviewSection />
-      <PuroSpritz />
-      <SmashAltoSection />
-      <DoveSiamoSection />
-    </main>
+      <PressStrip />
+      <SmashShowcase />
+      <Features />
+      <Manifesto />
+      <Process />
+      <ComboBanner />
+      <Testimonials />
+      <FAQ />
+      <FinalCTA />
+    </>
   );
 }

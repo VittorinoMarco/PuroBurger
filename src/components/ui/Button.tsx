@@ -1,69 +1,86 @@
 import Link from "next/link";
+import clsx from "clsx";
+import { ArrowRight } from "lucide-react";
+import type { ComponentProps, ReactNode } from "react";
 
-type ButtonVariant = "primary" | "secondary" | "ghost" | "whatsapp";
-type ButtonSize = "sm" | "md" | "lg";
+type Variant = "primary" | "ghost" | "outline";
+type Size = "sm" | "md" | "lg";
 
-interface ButtonProps {
-  variant?: ButtonVariant;
-  size?: ButtonSize;
-  href?: string;
-  children: React.ReactNode;
+type BaseProps = {
+  variant?: Variant;
+  size?: Size;
+  withArrow?: boolean;
+  children: ReactNode;
   className?: string;
-  onClick?: () => void;
-  type?: "button" | "submit";
-}
-
-const variantStyles: Record<ButtonVariant, string> = {
-  primary: "bg-puro-green hover:bg-puro-green-hover text-white border-transparent",
-  secondary:
-    "border-2 border-white text-white hover:bg-white hover:text-black",
-  ghost: "text-current hover:text-puro-green border-transparent",
-  whatsapp: "bg-[#25D366] hover:bg-[#20BD5A] text-white border-transparent",
 };
 
-const sizeStyles: Record<ButtonSize, string> = {
-  sm: "px-4 py-2.5 text-sm",
-  md: "px-6 py-3 text-base",
-  lg: "px-8 py-4 text-lg",
+const sizes: Record<Size, string> = {
+  sm: "px-4 py-2 text-sm",
+  md: "px-5 py-2.5 text-sm",
+  lg: "px-7 py-3.5 text-base",
 };
 
-export default function Button({
+const variants: Record<Variant, string> = {
+  primary:
+    "bg-puro-green text-black hover:bg-puro-green-hover shadow-glow active:scale-[.98]",
+  ghost:
+    "border border-white/20 text-white hover:border-puro-green hover:text-puro-green",
+  outline:
+    "border border-puro-green text-puro-green hover:bg-puro-green hover:text-black",
+};
+
+export function Button({
+  href,
   variant = "primary",
   size = "md",
-  href,
+  withArrow,
+  className,
   children,
-  className = "",
-  onClick,
-  type = "button",
-}: ButtonProps) {
-  const baseStyles =
-    "inline-flex items-center justify-center gap-2 rounded-full font-semibold transition-all duration-300 border";
+  ...rest
+}: BaseProps & { href?: string } & Omit<ComponentProps<"button">, "children">) {
+  const cls = clsx(
+    "btn rounded-full font-semibold inline-flex items-center justify-center gap-2 transition-all",
+    sizes[size],
+    variants[variant],
+    className
+  );
 
-  const combinedClassName = `${baseStyles} ${variantStyles[variant]} ${sizeStyles[size]} ${className}`;
-
-  if (href?.startsWith("tel:") || href?.startsWith("http")) {
-    return (
-      <a href={href} className={combinedClassName}>
-        {children}
-      </a>
-    );
-  }
+  const content = (
+    <>
+      <span>{children}</span>
+      {withArrow && (
+        <ArrowRight
+          className="h-4 w-4 transition-transform group-hover:translate-x-0.5"
+          aria-hidden
+        />
+      )}
+    </>
+  );
 
   if (href) {
+    const isExternal = /^https?:/.test(href);
+    if (isExternal) {
+      return (
+        <a
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={clsx(cls, "group")}
+        >
+          {content}
+        </a>
+      );
+    }
     return (
-      <Link href={href} className={combinedClassName}>
-        {children}
+      <Link href={href} className={clsx(cls, "group")}>
+        {content}
       </Link>
     );
   }
 
   return (
-    <button
-      type={type}
-      onClick={onClick}
-      className={combinedClassName}
-    >
-      {children}
+    <button className={clsx(cls, "group")} {...rest}>
+      {content}
     </button>
   );
 }

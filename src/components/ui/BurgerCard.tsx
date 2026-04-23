@@ -1,57 +1,52 @@
-"use client";
-
 import Image from "next/image";
-import { motion } from "framer-motion";
-import type { Burger } from "@/lib/burgers";
-import { getBurgerImage } from "@/lib/burgers";
-import Badge from "./Badge";
+import { Plus } from "lucide-react";
+import { Badge } from "./Badge";
+import type { MenuItem } from "@/lib/menu";
+import { SITE } from "@/lib/site";
 
-interface BurgerCardProps {
-  burger: Burger;
-  imageUrl?: string;
-  compact?: boolean;
-}
-
-export default function BurgerCard({ burger, imageUrl, compact = false }: BurgerCardProps) {
-  const imgSrc = imageUrl || getBurgerImage(burger.imageIndex ?? 0);
-
-  const card = (
-    <motion.article
-      whileHover={{ scale: 1.03, boxShadow: "0 25px 50px -12px rgba(0,0,0,0.25)" }}
-      transition={{ duration: 0.3 }}
-      className="bg-white rounded-[20px] overflow-hidden shadow-lg"
-    >
-      <div className="relative aspect-[4/3] overflow-hidden">
+export function BurgerCard({ item, priority }: { item: MenuItem; priority?: boolean }) {
+  return (
+    <article className="card-dark overflow-hidden flex flex-col group hover:border-puro-green/40 transition-colors">
+      <div className="relative aspect-[4/3] bg-puro-ink">
+        {item.isNew && (
+          <Badge className="absolute top-3 left-3 z-10">New</Badge>
+        )}
+        {item.isSignature && !item.isNew && (
+          <Badge tone="dark" className="absolute top-3 left-3 z-10">
+            Signature
+          </Badge>
+        )}
         <Image
-          src={imgSrc}
-          alt={burger.name}
+          src={item.image}
+          alt={item.name}
           fill
-          className="object-cover"
-          sizes="(max-width: 768px) 100vw, 33vw"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 400px"
+          className="object-cover transition-transform duration-500 group-hover:scale-105"
+          priority={priority}
         />
       </div>
-      <div className="p-4">
-        <h3 className="font-display font-semibold text-xl text-black">
-          {burger.name}
+      <div className="flex flex-1 flex-col gap-3 p-6 sm:p-7">
+        <h3 className="font-display text-xl font-bold uppercase tracking-wide">
+          {item.name}
         </h3>
-        <p
-          className={`text-black/70 leading-relaxed ${
-            compact ? "line-clamp-2 text-sm" : "text-sm mt-1"
-          }`}
-        >
-          {burger.ingredients}
+        <p className="text-sm text-white/60 leading-relaxed flex-1 text-pretty">
+          {item.description}
         </p>
-        <div className="mt-3 flex flex-wrap items-center justify-between gap-2">
-          <div className="flex flex-wrap gap-1">
-            {burger.badges?.map((b) => (
-              <Badge key={b} variant={b} />
-            ))}
-          </div>
-          <span className="font-bold text-puro-green">{burger.price}</span>
+        <div className="flex items-center justify-between pt-2">
+          <span className="text-xl font-bold">
+            €{item.price.toFixed(2).replace(".", ",")}
+          </span>
+          <a
+            href={SITE.orderUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`Ordina ${item.name}`}
+            className="h-10 w-10 rounded-full bg-puro-green text-black grid place-items-center hover:bg-puro-green-hover active:scale-95 transition"
+          >
+            <Plus className="h-5 w-5" strokeWidth={2.5} />
+          </a>
         </div>
       </div>
-    </motion.article>
+    </article>
   );
-
-  return card;
 }
