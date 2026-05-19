@@ -13,7 +13,7 @@ export default function NotFound() {
           <span className="italic text-puro-green">trovata.</span>
         </h1>
         <p className="text-white/55 max-w-md mx-auto text-pretty">
-          La crosticina è andata, la scottona no. Torna in home o scegli il
+          La crosticina è andata, la carne di scottona no. Torna in home o scegli il
           tuo prossimo smash dal menu.
         </p>
         <div className="flex gap-3 justify-center pt-2">

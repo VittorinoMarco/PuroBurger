@@ -2,7 +2,7 @@ import { Trophy, Beef, ShieldCheck } from "lucide-react";
 
 const ITEMS = [
   { icon: Trophy, text: "N°1 dello Smash Burger" },
-  { icon: Beef, text: "100% Scottona Italiana" },
+  { icon: Beef, text: "100% Carne di scottona italiana" },
   { icon: ShieldCheck, text: "Zero Additivi · Zero Conservanti" },
 ];
 

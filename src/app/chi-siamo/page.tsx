@@ -17,15 +17,15 @@ import { SITE } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Chi Siamo",
   description:
-    "La storia di Puro Burger: come siamo diventati N°1 dello Smash Burger. Filiera corta, scottona italiana, tecnica SmashAlto, zero additivi. Il manifesto di un brand che non scende a compromessi.",
+    "La storia di PuroBurger: come siamo diventati N°1 dello Smash Burger. Filiera corta, carne di scottona italiana, tecnica SmashAlto, zero additivi. Il manifesto di un brand che non scende a compromessi.",
   alternates: { canonical: `${SITE.url}/chi-siamo` },
 };
 
 const VALUES = [
   {
     icon: Beef,
-    title: "100% Scottona Italiana",
-    text: "Solo scottona da allevamenti selezionati. Frollata 48h, macinata ogni mattina in cucina.",
+    title: "100% Carne di scottona italiana",
+    text: "Solo carne di scottona da allevamenti selezionati. Frollata 48h, macinata ogni mattina in cucina.",
   },
   {
     icon: Flame,
@@ -58,7 +58,7 @@ const PROCESS = [
   {
     n: "01",
     title: "La scelta della carne",
-    text: "Scottona italiana da allevamenti selezionati. Taglio dedicato, frollatura minima di 48h, macinatura in cucina ogni mattina.",
+    text: "Carne di scottona italiana da allevamenti selezionati. Taglio dedicato, frollatura minima di 48h, macinatura in cucina ogni mattina.",
   },
   {
     n: "02",
@@ -68,7 +68,7 @@ const PROCESS = [
   {
     n: "03",
     title: "Lo smash",
-    text: "Piastra a 260°C. Pressione decisa per 30 secondi. La carne si apre, i succhi caramellizzano, nasce la crosta firma Puro.",
+    text: "Piastra a 260°C. Pressione decisa per 30 secondi. La carne si apre, i succhi caramellizzano, nasce la crosta firma PuroBurger.",
   },
   {
     n: "04",
@@ -106,7 +106,7 @@ export default function ChiSiamoPage() {
               <span className="italic text-puro-green">smashare.</span>
             </h1>
             <p className="text-lg sm:text-xl text-white/70 leading-relaxed max-w-xl text-pretty">
-              Puro Burger nasce a Scalea da un&apos;ossessione precisa: 100%
+              PuroBurger nasce a Scalea da un&apos;ossessione precisa: 100%
               carne di scottona italiana, zero additivi, una tecnica che non
               ammette scorciatoie. Ogni morso è una dichiarazione di intenti.
             </p>
@@ -116,7 +116,7 @@ export default function ChiSiamoPage() {
             <div className="col-span-12 sm:col-span-7 relative aspect-[16/10] sm:aspect-[16/9] rounded-food-lg overflow-hidden ring-1 ring-white/5">
               <Image
                 src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1600&q=85"
-                alt="Puro Burger — il locale"
+                alt="PuroBurger — il locale"
                 fill
                 priority
                 sizes="(max-width:768px) 100vw, 60vw"
@@ -164,7 +164,7 @@ export default function ChiSiamoPage() {
           <div className="h-px w-24 bg-puro-green/40 mx-auto" />
           <p className="font-display text-lg leading-relaxed text-white/70 text-pretty">
             Abbiamo iniziato in un piccolo laboratorio, lavorando chili di
-            scottona, testando pani, salse e temperature. Oggi siamo N°1 dello
+            carne di scottona, testando pani, salse e temperature. Oggi siamo N°1 dello
             Smash Burger perché non abbiamo mai smesso di chiederci come fare
             meglio: una pallina più rotonda, una crosta più scura, un morso
             più preciso.
@@ -179,7 +179,7 @@ export default function ChiSiamoPage() {
           <p className="font-display text-sm leading-relaxed text-white/50 text-pretty">
             Dal 2019 l&apos;idea, dal 2021 il primo store a Scalea, nel 2023 la
             tecnica SmashAlto codificata. Oggi: filiera rafforzata, Panino del
-            Mese, stessa promessa — 100% scottona, zero additivi.
+            Mese, stessa promessa — 100% carne di scottona, zero additivi.
           </p>
         </div>
       </section>
@@ -253,7 +253,7 @@ export default function ChiSiamoPage() {
         <div className="container mx-auto grid gap-6 sm:gap-8 lg:grid-cols-4 lg:gap-10">
           {[
             { n: "+120k", l: "Burger schiacciati" },
-            { n: "4,9/5", l: "Recensioni Google" },
+            { n: "4,8/5", l: "Recensioni Google" },
             { n: "48h", l: "Frollatura minima" },
             { n: "100%", l: "Carne italiana" },
           ].map((s) => (
@@ -313,7 +313,7 @@ export default function ChiSiamoPage() {
             </blockquote>
             <figcaption className="text-[11px] uppercase tracking-[0.22em] text-white/50 font-bold flex items-center justify-center gap-2">
               <Sparkles className="h-3 w-3 text-puro-green" />
-              Il manifesto Puro
+              Il manifesto PuroBurger
             </figcaption>
           </figure>
         </div>
@@ -328,11 +328,11 @@ export default function ChiSiamoPage() {
                 Pronto ad assaggiare la differenza?
               </p>
               <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-black uppercase leading-[0.98] text-balance">
-                Vieni a provare <span className="italic">Puro.</span>
+                Vieni a provare <span className="italic">PuroBurger.</span>
               </h2>
               <p className="text-black/75 text-pretty">
                 Prenota un tavolo, passa in store o ordina direttamente su
-                WhatsApp. 100% scottona, zero additivi. Ti aspettiamo.
+                WhatsApp. 100% carne di scottona, zero additivi. Ti aspettiamo.
               </p>
               <div className="flex flex-wrap gap-3 pt-2">
                 <Button

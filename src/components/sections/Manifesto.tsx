@@ -17,7 +17,7 @@ export function Manifesto() {
           <SectionLabel className="justify-center">Il manifesto</SectionLabel>
 
           <h2 className="font-display font-black text-4xl sm:text-5xl lg:text-[64px] leading-[1] uppercase text-balance">
-            100% scottona. <br />
+            100% carne di scottona. <br />
             Zero additivi. <br />
             <span className="italic text-puro-green">Nessun compromesso.</span>
           </h2>
@@ -28,7 +28,7 @@ export function Manifesto() {
             Non inseguiamo mode. Scegliamo la carne dal macellaio, la
             schiacciamo sulla piastra rovente, la stringiamo tra due fette di
             brioche artigianale. Un gesto antico, fatto con fuoco, tempi giusti
-            e materie prime che sappiamo riconoscere. Questo è Puro Burger.
+            e materie prime che sappiamo riconoscere. Questo è PuroBurger.
           </p>
 
           <div className="pt-4">

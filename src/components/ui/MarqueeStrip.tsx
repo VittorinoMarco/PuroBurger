@@ -1,6 +1,6 @@
 const DEFAULTS = [
   "N°1 dello Smash Burger",
-  "100% Scottona Italiana",
+  "100% Carne di scottona italiana",
   "Zero additivi · Zero conservanti",
   "Macinata ogni giorno · Mai congelata",
   "Brioche a lievitazione naturale",

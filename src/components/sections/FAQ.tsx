@@ -8,15 +8,15 @@ import { SectionLabel } from "@/components/ui/SectionLabel";
 const FAQS = [
   {
     q: "Che carne usate nei vostri burger?",
-    a: "Usiamo esclusivamente scottona italiana, proveniente da allevamenti selezionati. Viene macinata ogni giorno in loco: niente carne congelata, niente additivi, niente conservanti.",
+    a: "Usiamo esclusivamente carne di scottona italiana, proveniente da allevamenti selezionati. Viene macinata ogni giorno in loco: niente carne congelata, niente additivi, niente conservanti.",
   },
   {
     q: "Cos'è lo Smash Alto?",
     a: "È la nostra tecnica: palline di carne schiacciate su piastra a 260°C per creare una crosticina caramellata sul fuori e mantenere un cuore succoso dentro. Un minuto di cottura, tanti anni di pratica.",
   },
   {
-    q: "Avete opzioni senza glutine o vegetariane?",
-    a: "Sì. Abbiamo un Veggie Smash con patty vegetale e possiamo servire ogni burger con pane senza glutine. Segnalacelo in ordine per procedere separatamente in cucina.",
+    q: "Avete opzioni vegetariane?",
+    a: "Sì. Abbiamo burger vegetali sulla carta, come il Puro Green con patty vegetale. Segnalacelo in ordine così lo prepariamo con cura in cucina.",
   },
   {
     q: "Si può ordinare a domicilio?",

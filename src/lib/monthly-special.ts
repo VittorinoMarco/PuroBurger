@@ -1,3 +1,9 @@
+/**
+ * Imposta `true` per mostrare di nuovo il blocco Panino del mese in home.
+ * Dati e componente restano nel progetto anche quando è `false`.
+ */
+export const SHOW_PANINO_DEL_MESE_ON_HOME = false;
+
 export type MonthlySpecial = {
   id: string;
   month: string;
@@ -18,16 +24,17 @@ export const MONTHLY_SPECIAL: MonthlySpecial = {
   month: "Aprile 2026",
   name: "PuroParmigiano",
   tagline:
-    "Doppio Smash di sola scottona italiana, Parmigiano 24 mesi e balsamico. Solo per questo mese.",
+    "Parmigiano Reggiano, bacon supreme e Tropea piastrata: il Panino del Mese firmato PuroBurger.",
   description:
-    "Doppio smash di scottona italiana, crema di Parmigiano Reggiano 24 mesi, bacon croccante, riduzione di aceto balsamico, rucola su pane brioche a lievitazione naturale.",
+    "Bun soffice a lunga lievitazione, puro hamburger di carne di scottona #SmashAlto, Parmigiano Reggiano, bacon supreme piastrato, cipolla rossa di Tropea piastrata, glassa di aceto balsamico e rucola.",
   price: 13.9,
   poster: "/PuroParmigiano.png",
   ingredients: [
-    "Doppio SmashAlto",
-    "Scottona 100%",
-    "Parmigiano 24 mesi",
-    "Bacon croccante",
-    "Balsamico ridotto",
+    "SmashAlto",
+    "Parmigiano Reggiano",
+    "Bacon supreme",
+    "Tropea piastrata",
+    "Glassa balsamico",
+    "Rucola",
   ],
 };

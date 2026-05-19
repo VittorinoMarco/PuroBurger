@@ -16,7 +16,7 @@ export const TESTIMONIALS: Testimonial[] = [
     name: "Luca B.",
     role: "Recensione Google",
     rating: 5,
-    text: "Il miglior smash che abbia mai provato. Si sente la scottona vera, non il burger industriale. Crosta perfetta, cuore succoso.",
+    text: "Il miglior smash che abbia mai provato. Si sente la carne di scottona vera, non il burger industriale. Crosta perfetta, cuore succoso.",
     avatar: a("photo-1500648767791-00dcc994a43e"),
   },
   {
@@ -30,9 +30,9 @@ export const TESTIMONIALS: Testimonial[] = [
   {
     id: "3",
     name: "Alessandro T.",
-    role: "Recensione TripAdvisor",
+    role: "Recensione Google",
     rating: 5,
-    text: "Ingredienti che riconosci in bocca. Scottona italiana, brioche artigianale, salse di casa. Rispetto totale della materia prima.",
+    text: "Ingredienti che riconosci in bocca. Carne di scottona italiana, brioche artigianale, salse di casa. Rispetto totale della materia prima.",
     avatar: a("photo-1472099645785-5658abf4ff4e"),
   },
   {

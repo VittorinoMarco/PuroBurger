@@ -89,7 +89,7 @@ export function MobileNav() {
               <ArrowRight className="h-4 w-4" />
             </a>
             <p className="text-center text-[11px] uppercase tracking-[0.22em] text-puro-green font-bold">
-              100% Scottona · Zero Additivi
+              100% Carne di scottona · Zero Additivi
             </p>
             <div className="flex justify-between text-sm text-white/60">
               <a href={`tel:${SITE.phone.replace(/\s/g, "")}`}>{SITE.phone}</a>

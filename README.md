@@ -1,6 +1,6 @@
-# Puro Burger — Sito Ufficiale
+# PuroBurger — Sito Ufficiale
 
-Sito multi-pagina del brand **Puro Burger · N°1 dello Smash**.
+Sito multi-pagina del brand **PuroBurger · N°1 dello Smash**.
 
 ## Stack
 

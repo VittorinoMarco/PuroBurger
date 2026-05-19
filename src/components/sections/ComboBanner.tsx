@@ -1,21 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
+import { Spark } from "@/components/ui/Spark";
 
 const COMBO_IMAGE = "/combo-weekend-hero.png";
-
-function Spark({ className }: { className?: string }) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="currentColor"
-      aria-hidden
-      className={className}
-    >
-      <path d="M12 0l1.6 9 9 1.6-9 1.6L12 21.2 10.4 12.2 1.4 10.6l9-1.6L12 0z" />
-    </svg>
-  );
-}
 
 function Swoosh({ className }: { className?: string }) {
   return (
@@ -133,7 +121,7 @@ export function ComboBanner() {
               <div className="relative mt-8 h-[220px] w-full max-w-[420px] sm:mt-10 sm:h-[260px] lg:mt-6 lg:h-[min(300px,30vw)] lg:max-h-[320px]">
                 <Image
                   src={COMBO_IMAGE}
-                  alt="Combo Puro Burger: classico, patatine e Löwenbräu o bibita"
+                  alt="Combo PuroBurger: classico, patatine e Löwenbräu o bibita"
                   fill
                   sizes="(max-width: 1024px) 100vw, 42vw"
                   className="object-contain object-center drop-shadow-[0_16px_40px_rgba(0,0,0,0.55)]"

@@ -17,12 +17,12 @@ export function SmashShowcase() {
           <div className="max-w-2xl space-y-6">
             <SectionLabel>Le icone della casa</SectionLabel>
             <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-black leading-[1] uppercase text-balance">
-              Scottona.{" "}
+              Carne di scottona.{" "}
               <span className="italic text-puro-green">Piastra.</span>{" "}
               Morso.
             </h2>
             <p className="text-white/60 max-w-md text-pretty">
-              Tre smash firma Puro. Doppio patty di scottona italiana, crosta
+              Tre idee dalla linea PuroBurger. Carne di scottona #SmashAlto, crosta
               caramellata, ingredienti scelti uno per uno. Zero additivi.
             </p>
           </div>

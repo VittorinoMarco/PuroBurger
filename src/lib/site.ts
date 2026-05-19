@@ -1,5 +1,5 @@
 export const SITE = {
-  name: "Puro Burger",
+  name: "PuroBurger",
   tagline: "N°1 dello Smash Burger",
   claim: "N°1 dello Smash Burger",
   slogan: "100% carne di scottona, zero additivi",
@@ -18,7 +18,7 @@ export const SITE = {
     tiktok: "https://tiktok.com/@puroburger",
   },
   orderUrl:
-    "https://wa.me/393291234567?text=Ciao%20Puro%20Burger!%20Vorrei%20ordinare%20il%20Panino%20del%20Mese",
+    "https://wa.me/393291234567?text=Ciao%20PuroBurger!%20Vorrei%20ordinare%20il%20Panino%20del%20Mese",
 };
 
 export const NAV_LINKS = [

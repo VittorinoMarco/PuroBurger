@@ -6,7 +6,7 @@ import { SITE } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Contatti",
   description:
-    "Prenota un tavolo, ordina su WhatsApp o vieni a Scalea: Puro Burger, N°1 dello Smash Burger. 100% scottona italiana, zero additivi.",
+    "Prenota un tavolo, ordina su WhatsApp o vieni a Scalea: PuroBurger, N°1 dello Smash Burger. 100% carne di scottona italiana, zero additivi.",
   alternates: { canonical: `${SITE.url}/contatti` },
 };
 

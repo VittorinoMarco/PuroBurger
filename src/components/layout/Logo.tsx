@@ -6,12 +6,12 @@ export function Logo({ className }: { className?: string }) {
   return (
     <Link
       href="/"
-      aria-label="Puro Burger — Home"
+      aria-label="PuroBurger — Home"
       className={clsx("inline-flex items-center gap-2", className)}
     >
       <Image
         src="/LogoPuroBurger.png"
-        alt="Puro Burger"
+        alt="PuroBurger"
         width={160}
         height={44}
         priority

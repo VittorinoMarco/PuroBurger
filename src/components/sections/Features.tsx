@@ -3,13 +3,14 @@ import { Beef, Flame, ShieldCheck } from "lucide-react";
 const FEATURES = [
   {
     icon: Beef,
-    title: "Solo Scottona Italiana",
+    title: "Solo carne di scottona italiana",
     text: "Filiera corta, allevamenti selezionati, macinatura in cucina ogni mattina. Mai congelata.",
   },
   {
     icon: Flame,
     title: "La tecnica dello SmashAlto",
-    text: "Pallina da 80g, piastra a 260°C, 30 secondi di pressione decisa. Crosta caramellata, cuore succoso.",
+    text:
+      "Pallina da almeno 150 g di sola carne di scottona: sulla piastra a 260 °C la schiacciamo pochi secondi con pressione decisa. Dentro resta succosa e morbida, fuori nasce la crosticina intensa che ti tiene il morso.",
   },
   {
     icon: ShieldCheck,

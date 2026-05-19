@@ -4,17 +4,20 @@ const STEPS = [
   {
     n: "01",
     title: "La pallina",
-    text: "Scottona italiana macinata ogni giorno. Palline da 80g, senza comprimere la carne: aria e succosità intatte.",
+    text:
+      "Carne di scottona italiana macinata ogni giorno. Palline da almeno 150 g, modellate senza schiacciare la fibra: restano aria e succosità prima del passaggio in piastra.",
   },
   {
     n: "02",
     title: "Lo smash",
-    text: "Piastra a 260°C, 30 secondi di pressione decisa. La carne si allarga, i succhi caramellizzano: nasce la crosta Puro.",
+    text:
+      "Piastra rovente a 260 °C, pochi secondi di pressione decisa: il disco si appiccica e si caramelizza sotto. I succhi restano dentro, fuori profuma la crosticina SmashAlto.",
   },
   {
     n: "03",
     title: "L'assemblaggio",
-    text: "Brioche artigianale tostata, salse di casa, verdure di stagione. Montato in 30 secondi, in tavola ancora caldo.",
+    text:
+      "Bun soffice a lunga lievitazione, leggermente tostato; salse originali preparate in casa e verdure di stagione. Montaggio rapido così arriva al morso ancora caldo e compatto.",
   },
 ];
 
@@ -32,7 +35,7 @@ export function Process() {
             <span className="italic text-puro-green">Nessun compromesso.</span>
           </h2>
           <p className="font-display text-base text-white/60 text-pretty sm:text-lg">
-            Lo SmashAlto firmato Puro in tre passaggi: stessa tecnica, stessa
+            Lo SmashAlto firmato PuroBurger in tre passaggi: stessa tecnica, stessa
             materia prima, ogni morso.
           </p>
         </div>

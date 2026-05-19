@@ -1,8 +1,6 @@
 import Image from "next/image";
-import { Plus } from "lucide-react";
 import { Badge } from "./Badge";
 import type { MenuItem } from "@/lib/menu";
-import { SITE } from "@/lib/site";
 
 export function BurgerCard({ item, priority }: { item: MenuItem; priority?: boolean }) {
   return (
@@ -32,20 +30,9 @@ export function BurgerCard({ item, priority }: { item: MenuItem; priority?: bool
         <p className="text-sm text-white/60 leading-relaxed flex-1 text-pretty">
           {item.description}
         </p>
-        <div className="flex items-center justify-between pt-2">
-          <span className="text-xl font-bold">
-            €{item.price.toFixed(2).replace(".", ",")}
-          </span>
-          <a
-            href={SITE.orderUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={`Ordina ${item.name}`}
-            className="h-10 w-10 rounded-full bg-puro-green text-black grid place-items-center hover:bg-puro-green-hover active:scale-95 transition"
-          >
-            <Plus className="h-5 w-5" strokeWidth={2.5} />
-          </a>
-        </div>
+        <p className="pt-2 text-xl font-bold tabular-nums">
+          €{item.price.toFixed(2).replace(".", ",")}
+        </p>
       </div>
     </article>
   );

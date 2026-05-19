@@ -18,7 +18,7 @@ export function FinalCTA() {
                 <span className="text-puro-green">differenza.</span>
               </h2>
               <p className="text-white/60 max-w-md text-pretty">
-                Dine-in, take away o consegna. Stessa scottona, stessa
+                Dine-in, take away o consegna. Stessa carne di scottona, stessa
                 tecnica, stesso morso. Nessun compromesso.
               </p>
               <div className="flex flex-wrap gap-3">

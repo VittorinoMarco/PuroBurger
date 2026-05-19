@@ -35,11 +35,11 @@ export function Footer() {
                 N°1 dello Smash Burger
               </span>
               <span className="inline-flex items-center gap-1.5 text-[11px] uppercase tracking-[0.14em] font-bold bg-puro-green/10 text-puro-green border border-puro-green/30 px-3 py-1.5 rounded-full">
-                100% scottona · Zero additivi
+                100% carne di scottona · Zero additivi
               </span>
             </div>
             <p className="text-sm text-white/55 max-w-sm">
-              Smash di sola scottona italiana, macinata ogni mattina in
+              Smash di sola carne di scottona italiana, macinata ogni mattina in
               cucina. Zero conservanti, zero coloranti, nessun compromesso.
               Dal 2019 a Scalea.
             </p>
@@ -77,7 +77,7 @@ export function Footer() {
         </div>
 
         <div className="mt-16 flex flex-col items-start justify-between gap-4 border-t border-white/5 pt-8 text-xs text-white/40 sm:flex-row sm:items-center lg:mt-20 lg:pt-10">
-          <p>© {new Date().getFullYear()} Puro Burger. Tutti i diritti riservati.</p>
+          <p>© {new Date().getFullYear()} {SITE.name}. Tutti i diritti riservati.</p>
           <p>
             Carne pura. Gesto preciso.{" "}
             <span className="text-puro-green">Ogni volta.</span>

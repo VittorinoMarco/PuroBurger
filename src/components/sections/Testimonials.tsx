@@ -12,10 +12,10 @@ export function Testimonials() {
             <SectionLabel>Cosa dicono di noi</SectionLabel>
             <h2 className="font-display text-4xl sm:text-5xl font-bold leading-[1.02] uppercase text-balance">
               Recensioni vere. <br />
-              <span className="italic">Scottona vera.</span>
+              <span className="italic">Carne di scottona vera.</span>
             </h2>
             <p className="text-white/55 text-sm text-pretty max-w-xs">
-              +1.200 recensioni verificate su Google & TripAdvisor. Media 4,9/5.
+              +220 recensioni verificate su Google. Media 4,8/5.
             </p>
           </div>
 
