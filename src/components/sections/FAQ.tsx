@@ -19,8 +19,8 @@ const FAQS = [
     a: "Sì. Abbiamo burger vegetali sulla carta, come il Puro Green con patty vegetale. Segnalacelo in ordine così lo prepariamo con cura in cucina.",
   },
   {
-    q: "Si può ordinare a domicilio?",
-    a: "Certo. Consegna in zona Scalea tramite WhatsApp o Glovo/Deliveroo. Ordine minimo 15€, tempi medi 25–40 minuti.",
+    q: "Si può ordinare d'asporto?",
+    a: "Certo. Ordini su WhatsApp o al banco e ritiri in locale a Scalea. Ti avvisiamo quando è pronto: tempi medi di preparazione 15–25 minuti.",
   },
   {
     q: "Accettate prenotazioni?",

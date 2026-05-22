@@ -13,6 +13,7 @@ import {
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { Button } from "@/components/ui/Button";
 import { SITE } from "@/lib/site";
+import { CHI_SIAMO_GALLERY, CHI_SIAMO_HERO } from "@/lib/foto";
 
 export const metadata: Metadata = {
   title: "Chi Siamo",
@@ -30,11 +31,11 @@ const VALUES = [
   {
     icon: Flame,
     title: "Tecnica SmashAlto",
-    text: "Pallina da 80g, piastra a 260°C, 30 secondi di pressione. La firma della casa.",
+    text: "Pallina da 150 g, piastra a 260°C, pochi secondi di pressione. La firma della casa.",
   },
   {
     icon: Wheat,
-    title: "Pane e salse di casa",
+    title: "Pane e salse",
     text: "Brioche a lievitazione naturale, salse preparate in cucina ogni giorno. Niente buste.",
   },
   {
@@ -44,7 +45,7 @@ const VALUES = [
   },
   {
     icon: Leaf,
-    title: "Filiera corta calabrese",
+    title: "Filiera corta",
     text: "Verdure di stagione locali, rapporto diretto con agricoltori e macellai della regione.",
   },
   {
@@ -63,12 +64,12 @@ const PROCESS = [
   {
     n: "02",
     title: "La pallina",
-    text: "80 grammi, modellati a mano, leggeri e ariosi. Mai compressi: la carne deve respirare per restare succosa.",
+    text: "150 grammi, modellati a mano, generosi e ariosi. Mai compressi: la carne deve respirare per restare succosa.",
   },
   {
     n: "03",
     title: "Lo smash",
-    text: "Piastra a 260°C. Pressione decisa per 30 secondi. La carne si apre, i succhi caramellizzano, nasce la crosta firma PuroBurger.",
+    text: "Piastra a 260°C. Pressione decisa per pochi secondi. La carne si apre, i succhi caramellizzano, nasce la crosta firma PuroBurger.",
   },
   {
     n: "04",
@@ -77,16 +78,7 @@ const PROCESS = [
   },
 ];
 
-const GALLERY = [
-  "photo-1550547660-d9450f859349",
-  "photo-1594212699903-ec8a3eca50f5",
-  "photo-1606131731446-5568d87113aa",
-  "photo-1572802419224-296b0aeee0d9",
-  "photo-1552566626-52f8b828add9",
-  "photo-1568901346375-23c9450c58cd",
-  "photo-1585238342024-78d387f4a707",
-  "photo-1555396273-367ea4eb4db5",
-];
+const GALLERY = CHI_SIAMO_GALLERY;
 
 export default function ChiSiamoPage() {
   return (
@@ -115,8 +107,8 @@ export default function ChiSiamoPage() {
           <div className="mt-12 sm:mt-16 grid grid-cols-12 gap-3 sm:gap-4">
             <div className="col-span-12 sm:col-span-7 relative aspect-[16/10] sm:aspect-[16/9] rounded-food-lg overflow-hidden ring-1 ring-white/5">
               <Image
-                src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1600&q=85"
-                alt="PuroBurger — il locale"
+                src={CHI_SIAMO_HERO[0].src}
+                alt={CHI_SIAMO_HERO[0].alt}
                 fill
                 priority
                 sizes="(max-width:768px) 100vw, 60vw"
@@ -125,8 +117,8 @@ export default function ChiSiamoPage() {
             </div>
             <div className="col-span-6 sm:col-span-5 relative aspect-[4/5] sm:aspect-[16/9] rounded-food-lg overflow-hidden ring-1 ring-white/5">
               <Image
-                src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=1200&q=85"
-                alt="Smash burger"
+                src={CHI_SIAMO_HERO[1].src}
+                alt={CHI_SIAMO_HERO[1].alt}
                 fill
                 sizes="(max-width:768px) 50vw, 40vw"
                 className="object-cover"
@@ -134,8 +126,8 @@ export default function ChiSiamoPage() {
             </div>
             <div className="col-span-6 sm:col-span-5 relative aspect-[4/5] sm:aspect-[16/9] rounded-food-lg overflow-hidden ring-1 ring-white/5">
               <Image
-                src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=1200&q=85"
-                alt="Detail"
+                src={CHI_SIAMO_HERO[2].src}
+                alt={CHI_SIAMO_HERO[2].alt}
                 fill
                 sizes="(max-width:768px) 50vw, 40vw"
                 className="object-cover"
@@ -143,8 +135,8 @@ export default function ChiSiamoPage() {
             </div>
             <div className="col-span-12 sm:col-span-7 relative aspect-[16/10] sm:aspect-[16/9] rounded-food-lg overflow-hidden ring-1 ring-white/5">
               <Image
-                src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?auto=format&fit=crop&w=1600&q=85"
-                alt="Kitchen"
+                src={CHI_SIAMO_HERO[3].src}
+                alt={CHI_SIAMO_HERO[3].alt}
                 fill
                 sizes="(max-width:768px) 100vw, 60vw"
                 className="object-cover"
@@ -163,11 +155,9 @@ export default function ChiSiamoPage() {
           </h2>
           <div className="h-px w-24 bg-puro-green/40 mx-auto" />
           <p className="font-display text-lg leading-relaxed text-white/70 text-pretty">
-            Abbiamo iniziato in un piccolo laboratorio, lavorando chili di
-            carne di scottona, testando pani, salse e temperature. Oggi siamo N°1 dello
-            Smash Burger perché non abbiamo mai smesso di chiederci come fare
-            meglio: una pallina più rotonda, una crosta più scura, un morso
-            più preciso.
+            Oggi siamo N°1 dello SmashAlto perché non abbiamo mai smesso di
+            chiederci come fare meglio: una pallina più grande, una crosta più
+            scura, un morso più preciso.
           </p>
           <p className="font-display text-lg leading-relaxed text-white/70 text-pretty">
             Non serviamo panini. Serviamo un&apos;idea di purezza e rispetto
@@ -177,9 +167,9 @@ export default function ChiSiamoPage() {
             richiederebbe di farlo.
           </p>
           <p className="font-display text-sm leading-relaxed text-white/50 text-pretty">
-            Dal 2019 l&apos;idea, dal 2021 il primo store a Scalea, nel 2023 la
-            tecnica SmashAlto codificata. Oggi: filiera rafforzata, Panino del
-            Mese, stessa promessa — 100% carne di scottona, zero additivi.
+            Dal 2022 l&apos;idea, dal 2024 il primo store a Scalea, nel 2026 la
+            tecnica SmashAlto codificata. Oggi: filiera rafforzata, stessa
+            promessa — 100% carne di scottona, zero additivi.
           </p>
         </div>
       </section>
@@ -255,7 +245,7 @@ export default function ChiSiamoPage() {
             { n: "+120k", l: "Burger schiacciati" },
             { n: "4,8/5", l: "Recensioni Google" },
             { n: "48h", l: "Frollatura minima" },
-            { n: "100%", l: "Carne italiana" },
+            { n: "100%", l: "Carne di scottona italiana" },
           ].map((s) => (
             <div key={s.l} className="text-center lg:text-left">
               <p className="font-display text-5xl sm:text-6xl font-black text-puro-green leading-none">
@@ -279,16 +269,16 @@ export default function ChiSiamoPage() {
           </div>
 
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4">
-            {GALLERY.map((q, i) => (
+            {GALLERY.map(({ src, alt }, i) => (
               <div
-                key={q}
+                key={src}
                 className={`relative rounded-food overflow-hidden ring-1 ring-white/5 ${
                   i % 5 === 0 ? "aspect-[4/5]" : "aspect-square"
                 }`}
               >
                 <Image
-                  src={`https://images.unsplash.com/${q}?auto=format&fit=crop&w=600&q=78`}
-                  alt=""
+                  src={src}
+                  alt={alt}
                   fill
                   sizes="(max-width:640px) 50vw, 25vw"
                   loading="lazy"

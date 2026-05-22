@@ -3,7 +3,7 @@ import { Star } from "lucide-react";
 const BADGES = [
   { k: "4,8 / 5", l: "Google · +220 recensioni" },
   { k: "Top 10", l: "Smash Burger Calabria 2025" },
-  { k: "N°1", l: "Dello Smash Burger · Scalea" },
+  { k: "N°1", l: "SmashBurger e SmashAlto" },
   { k: "+120k", l: "Smash serviti · 100% carne di scottona" },
 ];
 

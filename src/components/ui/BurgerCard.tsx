@@ -1,6 +1,25 @@
 import Image from "next/image";
+import { Fragment } from "react";
 import { Badge } from "./Badge";
 import type { MenuItem } from "@/lib/menu";
+
+const SMASH_TOKEN = "#SmashAlto";
+
+function DescriptionWithSmashAlto({ text }: { text: string }) {
+  const parts = text.split(SMASH_TOKEN);
+  return (
+    <>
+      {parts.map((part, i) => (
+        <Fragment key={i}>
+          {part}
+          {i < parts.length - 1 ? (
+            <span className="font-bold text-puro-green">{SMASH_TOKEN}</span>
+          ) : null}
+        </Fragment>
+      ))}
+    </>
+  );
+}
 
 export function BurgerCard({ item, priority }: { item: MenuItem; priority?: boolean }) {
   return (
@@ -28,7 +47,7 @@ export function BurgerCard({ item, priority }: { item: MenuItem; priority?: bool
           {item.name}
         </h3>
         <p className="text-sm text-white/60 leading-relaxed flex-1 text-pretty">
-          {item.description}
+          <DescriptionWithSmashAlto text={item.description} />
         </p>
         <p className="pt-2 text-xl font-bold tabular-nums">
           €{item.price.toFixed(2).replace(".", ",")}

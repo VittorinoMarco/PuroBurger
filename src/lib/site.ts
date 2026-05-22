@@ -21,9 +21,20 @@ export const SITE = {
     "https://wa.me/393291234567?text=Ciao%20PuroBurger!%20Vorrei%20ordinare%20il%20Panino%20del%20Mese",
 };
 
-export const NAV_LINKS = [
+/** `false` = niente voce Menu in nav, niente link al listino, `/menu` reindirizza a home. */
+export const SHOW_MENU_PAGE_PUBLIC = false;
+
+/** `false` = nasconde il blocco combo weekend in home (`#combo`). Componente mantenuto in repo. */
+export const SHOW_COMBO_SECTION_ON_HOME = false;
+
+const NAV_LINKS_ALL = [
   { href: "/", label: "Home" },
   { href: "/menu", label: "Menu" },
   { href: "/chi-siamo", label: "Chi Siamo" },
   { href: "/contatti", label: "Contatti" },
 ] as const;
+
+export const NAV_LINKS: readonly { href: string; label: string }[] =
+  SHOW_MENU_PAGE_PUBLIC
+    ? NAV_LINKS_ALL
+    : NAV_LINKS_ALL.filter((l) => l.href !== "/menu");

@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
+import { redirect } from "next/navigation";
 import clsx from "clsx";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { BurgerCard } from "@/components/ui/BurgerCard";
 import { MENU_CATEGORIES } from "@/lib/menu";
-import { SITE } from "@/lib/site";
+import { SITE, SHOW_MENU_PAGE_PUBLIC } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Menu",
@@ -13,6 +14,10 @@ export const metadata: Metadata = {
 };
 
 export default function MenuPage() {
+  if (!SHOW_MENU_PAGE_PUBLIC) {
+    redirect("/");
+  }
+
   return (
     <>
       <div className="border-b border-puro-border bg-puro-black">

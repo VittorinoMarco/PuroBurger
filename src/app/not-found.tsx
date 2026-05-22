@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
+import { SHOW_MENU_PAGE_PUBLIC } from "@/lib/site";
 
 export default function NotFound() {
   return (
@@ -12,17 +13,23 @@ export default function NotFound() {
           Pagina non <br />
           <span className="italic text-puro-green">trovata.</span>
         </h1>
-        <p className="text-white/55 max-w-md mx-auto text-pretty">
-          La crosticina è andata, la carne di scottona no. Torna in home o scegli il
-          tuo prossimo smash dal menu.
+        <p className="mx-auto max-w-md text-pretty text-white/55">
+          La crosticina è andata, la carne di scottona no. Torna in home
+          {SHOW_MENU_PAGE_PUBLIC ? " o scegli il tuo prossimo smash dal menu." : "."}
         </p>
-        <div className="flex gap-3 justify-center pt-2">
+        <div className="flex flex-wrap gap-3 justify-center pt-2">
           <Button href="/" withArrow>
             Torna alla Home
           </Button>
-          <Link href="/menu" className="btn btn-ghost px-5 py-2.5 text-sm">
-            Scegli il tuo smash
-          </Link>
+          {SHOW_MENU_PAGE_PUBLIC ? (
+            <Link href="/menu" className="btn btn-ghost px-5 py-2.5 text-sm">
+              Scegli il tuo smash
+            </Link>
+          ) : (
+            <Link href="/contatti" className="btn btn-ghost px-5 py-2.5 text-sm">
+              Contattaci
+            </Link>
+          )}
         </div>
       </div>
     </section>

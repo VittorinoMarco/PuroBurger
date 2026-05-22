@@ -1,3 +1,5 @@
+import { FOTO } from "./foto";
+
 export type MenuItem = {
   id: string;
   name: string;
@@ -26,7 +28,7 @@ export const SMASH_BURGERS: MenuItem[] = [
     description:
       "Bun soffice a lunga lievitazione, puro hamburger di carne di scottona #SmashAlto.",
     price: 6.0,
-    image: img("photo-1568901346375-23c9450c58cd"),
+    image: FOTO.paninoMorso,
   },
   {
     id: "puro-basic",
@@ -34,7 +36,7 @@ export const SMASH_BURGERS: MenuItem[] = [
     description:
       "Bun a lunga lievitazione, smash di carne di scottona #SmashAlto, white cheese, salsa PuroBurger.",
     price: 8.0,
-    image: img("photo-1550547660-d9450f859349"),
+    image: FOTO.hamburgerFormaggio,
   },
   {
     id: "puro-cruncy",
@@ -42,7 +44,7 @@ export const SMASH_BURGERS: MenuItem[] = [
     description:
       "Bun a lunga lievitazione, smash di carne di scottona, white cheese, patatine Cruncy.",
     price: 9.0,
-    image: img("photo-1572802419224-296b0aeee0d9"),
+    image: FOTO.patateBacon,
   },
   {
     id: "puro-fresh",
@@ -50,7 +52,7 @@ export const SMASH_BURGERS: MenuItem[] = [
     description:
       "Bun a lunga lievitazione, smash di carne di scottona, white cheese, lattuga iceberg, pomodoro a fette.",
     price: 9.0,
-    image: img("photo-1606131731446-5568d87113aa"),
+    image: FOTO.paninoBox,
   },
   {
     id: "puro-classic",
@@ -58,7 +60,7 @@ export const SMASH_BURGERS: MenuItem[] = [
     description:
       "Bun a lunga lievitazione, smash di carne di scottona, white cheese, lattuga iceberg, cipolla rossa di Tropea, salsa PuroBurger.",
     price: 10.0,
-    image: img("photo-1594212699903-ec8a3eca50f5"),
+    image: FOTO.boxChiuso,
   },
   {
     id: "puro-bacon",
@@ -66,7 +68,7 @@ export const SMASH_BURGERS: MenuItem[] = [
     description:
       "Bun a lunga lievitazione, smash di carne di scottona, white cheese, bacon supreme piastrato, salsa PuroBurger.",
     price: 11.0,
-    image: img("photo-1550547660-d9450f859349"),
+    image: FOTO.burgerBaconFormaggio,
   },
   {
     id: "puro-original",
@@ -74,7 +76,7 @@ export const SMASH_BURGERS: MenuItem[] = [
     description:
       "Bun a lunga lievitazione, smash di carne di scottona, white cheese, bacon supreme piastrato, lattuga iceberg, cipolla rossa di Tropea, salsa PuroBurger.",
     price: 12.0,
-    image: img("photo-1586190848861-99aa4a171e90"),
+    image: FOTO.burgerBaconFormaggio,
   },
   {
     id: "puro-bufala",
@@ -82,7 +84,7 @@ export const SMASH_BURGERS: MenuItem[] = [
     description:
       "Bun a lunga lievitazione, smash di carne di scottona, mozzarella di bufala di Paestum, pomodoro, lattuga iceberg.",
     price: 12.0,
-    image: img("photo-1594212699903-ec8a3eca50f5"),
+    image: FOTO.hamburgerFormaggio,
   },
   {
     id: "puro-green",
@@ -90,7 +92,7 @@ export const SMASH_BURGERS: MenuItem[] = [
     description:
       "Bun a lunga lievitazione, hamburger vegetariano #SmashAlto, white cheese, lattuga iceberg, pomodoro a fette.",
     price: 12.0,
-    image: img("photo-1585238342024-78d387f4a707"),
+    image: FOTO.paninoBox,
     tags: ["Vegetariano"],
   },
   {
@@ -99,7 +101,7 @@ export const SMASH_BURGERS: MenuItem[] = [
     description:
       "Bun a lunga lievitazione, smash di carne di scottona, white cheese, bacon supreme piastrato, uovo piastrato, cipolla rossa di Tropea, rucola, glassa di aceto balsamico.",
     price: 14.0,
-    image: img("photo-1504674900247-0877df9cc836"),
+    image: FOTO.puroUovoTagliere,
   },
   {
     id: "puro-pecorino",
@@ -107,7 +109,7 @@ export const SMASH_BURGERS: MenuItem[] = [
     description:
       "Bun a lunga lievitazione, smash di carne di scottona, pecorino calabrese, bacon supreme piastrato, cipolla rossa piastrata, glassa di aceto balsamico, rucola.",
     price: 14.0,
-    image: img("photo-1551183053-bf91a1d81141"),
+    image: FOTO.hamburgerFormaggio,
   },
   {
     id: "puro-nduja",
@@ -115,7 +117,7 @@ export const SMASH_BURGERS: MenuItem[] = [
     description:
       "Bun a lunga lievitazione, smash di carne di scottona, pecorino calabrese, bacon supreme piastrato, cipolla rossa piastrata, 'nduja di Spilinga, rucola.",
     price: 14.0,
-    image: img("photo-1606131731446-5568d87113aa"),
+    image: FOTO.burgerBaconFormaggio,
   },
   {
     id: "puro-porcino",
@@ -123,7 +125,7 @@ export const SMASH_BURGERS: MenuItem[] = [
     description:
       "Bun a lunga lievitazione, smash di carne di scottona, white cheese, bacon supreme piastrato, funghi porcini, rucola.",
     price: 15.0,
-    image: img("photo-1568901346375-23c9450c58cd"),
+    image: FOTO.puroUovoManiPiatto,
   },
   {
     id: "puro-double",
@@ -131,7 +133,7 @@ export const SMASH_BURGERS: MenuItem[] = [
     description:
       "Bun a lunga lievitazione, doppio hamburger di carne di scottona #SmashAlto, doppio white cheese, bacon supreme piastrato, salsa PuroBurger.",
     price: 16.0,
-    image: img("photo-1594212699903-ec8a3eca50f5"),
+    image: FOTO.dettaglioBoxPanino,
     isSignature: true,
   },
 ];
@@ -142,7 +144,7 @@ export const FRITTI: MenuItem[] = [
     name: "Patatina crunchy",
     description: "Amido di patate, farina di riso, patate.",
     price: 4.0,
-    image: img("photo-1573080496219-bb080dd4f877"),
+    image: FOTO.patatePanoramica,
   },
   {
     id: "triangoli-formaggio",

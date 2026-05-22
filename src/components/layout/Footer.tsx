@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Instagram, Facebook, Mail, MapPin, Phone } from "lucide-react";
 import { Logo } from "./Logo";
-import { SITE } from "@/lib/site";
+import { SITE, SHOW_MENU_PAGE_PUBLIC, SHOW_COMBO_SECTION_ON_HOME } from "@/lib/site";
 
 const MENU = [
   { label: "I Nostri Smash", href: "/menu#smash" },
@@ -32,7 +32,7 @@ export function Footer() {
             <Logo />
             <div className="flex flex-wrap gap-2">
               <span className="inline-flex items-center gap-1.5 text-[11px] uppercase tracking-[0.14em] font-bold bg-puro-green text-black px-3 py-1.5 rounded-full">
-                N°1 dello Smash Burger
+                N°1 dello SmashAlto
               </span>
               <span className="inline-flex items-center gap-1.5 text-[11px] uppercase tracking-[0.14em] font-bold bg-puro-green/10 text-puro-green border border-puro-green/30 px-3 py-1.5 rounded-full">
                 100% carne di scottona · Zero additivi
@@ -41,7 +41,7 @@ export function Footer() {
             <p className="text-sm text-white/55 max-w-sm">
               Smash di sola carne di scottona italiana, macinata ogni mattina in
               cucina. Zero conservanti, zero coloranti, nessun compromesso.
-              Dal 2019 a Scalea.
+              Dal 2024 a Scalea.
             </p>
             <div className="space-y-2 text-sm text-white/70">
               <a
@@ -71,7 +71,15 @@ export function Footer() {
             </div>
           </div>
 
-          <FooterColumn title="Menu" links={MENU} />
+          {SHOW_MENU_PAGE_PUBLIC ? (
+            <FooterColumn
+              title="Menu"
+              links={MENU.filter(
+                (l) =>
+                  SHOW_COMBO_SECTION_ON_HOME || l.href !== "/#combo"
+              )}
+            />
+          ) : null}
           <FooterColumn title="Azienda" links={AZIENDA} />
           <FooterColumn title="Supporto" links={SUPPORTO} />
         </div>
