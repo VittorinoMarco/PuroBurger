@@ -33,6 +33,13 @@ jobs:
       - name: Build static site
         run: npm run build
 
+      - name: Prepare static output for Aruba FTP
+        run: |
+          # Alcuni hosting Aruba non accettano cartelle che iniziano con "_".
+          mv out/_next out/next
+          find out -type f \( -name '*.html' -o -name '*.js' -o -name '*.css' \) \
+            -exec sed -i 's|/_next/|/next/|g' {} +
+
       - name: Deploy via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
@@ -42,6 +49,6 @@ jobs:
           port: 21
           protocol: ftp
           local-dir: ./out/
-          server-dir: ./www/
+          server-dir: ./www.puroburgeritalia.it/
           log-level: minimal
           dangerous-clean-slate: false
