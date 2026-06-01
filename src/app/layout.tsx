@@ -25,10 +25,8 @@ export const metadata: Metadata = {
   authors: [{ name: SITE.name }],
   creator: SITE.name,
   icons: {
-    icon: [
-      { url: "/favicon.ico" },
-      { url: "/FaviconBurger.png", type: "image/png" },
-    ],
+    icon: [{ url: "/FaviconBurger.png", type: "image/png" }],
+    shortcut: "/FaviconBurger.png",
     apple: "/FaviconBurger.png",
   },
   openGraph: {
