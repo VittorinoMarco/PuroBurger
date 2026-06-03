@@ -101,7 +101,7 @@ export const SMASH_BURGERS: MenuItem[] = [
     description:
       "Bun a lunga lievitazione, smash di carne di scottona, white cheese, bacon supreme piastrato, uovo piastrato, cipolla rossa di Tropea, rucola, glassa di aceto balsamico.",
     price: 14.0,
-    image: FOTO.puroUovoTagliere,
+    image: FOTO.puroUovo,
   },
   {
     id: "puro-pecorino",
@@ -109,7 +109,7 @@ export const SMASH_BURGERS: MenuItem[] = [
     description:
       "Bun a lunga lievitazione, smash di carne di scottona, pecorino calabrese, bacon supreme piastrato, cipolla rossa piastrata, glassa di aceto balsamico, rucola.",
     price: 14.0,
-    image: FOTO.hamburgerFormaggio,
+    image: FOTO.puroPecorino,
   },
   {
     id: "puro-nduja",
@@ -117,7 +117,7 @@ export const SMASH_BURGERS: MenuItem[] = [
     description:
       "Bun a lunga lievitazione, smash di carne di scottona, pecorino calabrese, bacon supreme piastrato, cipolla rossa piastrata, 'nduja di Spilinga, rucola.",
     price: 14.0,
-    image: FOTO.burgerBaconFormaggio,
+    image: FOTO.puroNduja,
   },
   {
     id: "puro-porcino",

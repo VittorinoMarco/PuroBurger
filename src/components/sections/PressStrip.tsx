@@ -1,7 +1,8 @@
 import { Star } from "lucide-react";
+import { GOOGLE_RATING } from "@/lib/testimonials";
 
 const BADGES = [
-  { k: "4,8 / 5", l: "Google · +220 recensioni" },
+  { k: `${GOOGLE_RATING.score} / 5`, l: `Google · ${GOOGLE_RATING.label}` },
   { k: "Top 10", l: "Smash Burger Calabria 2025" },
   { k: "N°1", l: "SmashBurger e SmashAlto" },
   { k: "+120k", l: "Smash serviti · 100% carne di scottona" },

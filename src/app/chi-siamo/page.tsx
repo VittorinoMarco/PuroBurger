@@ -243,7 +243,7 @@ export default function ChiSiamoPage() {
         <div className="container mx-auto grid gap-6 sm:gap-8 lg:grid-cols-4 lg:gap-10">
           {[
             { n: "+120k", l: "Burger schiacciati" },
-            { n: "4,8/5", l: "Recensioni Google" },
+            { n: "4,8/5", l: "Google · (241) recensioni" },
             { n: "48h", l: "Frollatura minima" },
             { n: "100%", l: "Carne di scottona italiana" },
           ].map((s) => (

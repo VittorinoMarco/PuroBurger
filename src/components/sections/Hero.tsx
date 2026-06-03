@@ -1,8 +1,8 @@
-import Image from "next/image";
 import { Button } from "@/components/ui/Button";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { Star, Sparkles } from "lucide-react";
 import { SITE, SHOW_MENU_PAGE_PUBLIC } from "@/lib/site";
+import { GOOGLE_RATING } from "@/lib/testimonials";
 
 export function Hero() {
   return (
@@ -41,34 +41,21 @@ export function Hero() {
           </div>
 
           <div className="flex flex-wrap items-center justify-center gap-4 pt-1">
-            <div className="flex -space-x-2">
-              {[
-                "photo-1500648767791-00dcc994a43e",
-                "photo-1494790108377-be9c29b29330",
-                "photo-1472099645785-5658abf4ff4e",
-                "photo-1487412720507-e7ab37603c6f",
-              ].map((q) => (
-                <Image
-                  key={q}
-                  src={`https://images.unsplash.com/${q}?auto=format&fit=crop&w=80&q=80`}
-                  alt=""
-                  width={32}
-                  height={32}
-                  className="h-8 w-8 rounded-full object-cover ring-2 ring-black"
-                />
-              ))}
-            </div>
-            <div className="space-y-0.5 text-left">
-              <div className="flex items-center gap-1">
+            <div className="space-y-0.5 text-center">
+              <div className="flex items-center justify-center gap-1">
                 {Array.from({ length: 5 }).map((_, i) => (
                   <Star
                     key={i}
                     className="h-3.5 w-3.5 fill-puro-green text-puro-green"
                   />
                 ))}
-                <span className="ml-1 text-sm font-semibold">4,8</span>
+                <span className="ml-1 text-sm font-semibold">
+                  {GOOGLE_RATING.score}
+                </span>
               </div>
-              <p className="text-xs text-white/55">+220 recensioni · Google</p>
+              <p className="text-xs text-white/55">
+                {GOOGLE_RATING.label} · Google
+              </p>
             </div>
           </div>
         </div>
