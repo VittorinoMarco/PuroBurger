@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Plus, Minus } from "lucide-react";
 import clsx from "clsx";
 import { SectionLabel } from "@/components/ui/SectionLabel";
+import { SITE } from "@/lib/site";
 
 const FAQS = [
   {
@@ -28,7 +29,7 @@ const FAQS = [
   },
   {
     q: "Avete allergeni e tabella nutrizionale?",
-    a: "Sì, disponibili in cartaceo in store e via email su richiesta. Scrivici a ciao@puroburger.it.",
+    a: `Sì, disponibili in cartaceo in store e via email su richiesta. Scrivici a ${SITE.email}.`,
   },
 ];
 

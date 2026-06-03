@@ -4,21 +4,21 @@ export const SITE = {
   claim: "N°1 dello Smash Burger",
   slogan: "100% carne di scottona, zero additivi",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://puroburger.it",
-  phone: "+39 329 123 4567",
-  whatsapp: "393291234567",
-  email: "ciao@puroburger.it",
+  phone: "+39 375 824 9449",
+  whatsapp: "393758249449",
+  email: "puroburger@libero.it",
   address: "Corso Mediterraneo 12, 87029 Scalea (CS)",
   hours: {
     weekdays: "18:00 – 23:30",
     weekend: "12:30 – 15:00 · 18:00 – 00:30",
   },
   social: {
-    instagram: "https://instagram.com/puroburger",
+    instagram: "https://www.instagram.com/puroburgeritalia/",
     facebook: "https://facebook.com/puroburger",
     tiktok: "https://tiktok.com/@puroburger",
   },
   orderUrl:
-    "https://wa.me/393291234567?text=Ciao%20PuroBurger!%20Vorrei%20ordinare%20il%20Panino%20del%20Mese",
+    "https://wa.me/393758249449?text=Ciao%20PuroBurger!%20Vorrei%20ordinare",
 };
 
 /** `false` = niente voce Menu in nav, niente link al listino, `/menu` reindirizza a home. */
