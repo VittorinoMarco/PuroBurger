@@ -1,0 +1,7 @@
+Options -MultiViews -Indexes
+RewriteEngine On
+RewriteBase /
+
+# Asset Next.js: in deploy la cartella _next viene rinominata in assets/
+RewriteRule ^_next/static/(.*)$ /assets/static/$1 [L,R=301]
+RewriteRule ^next/static/(.*)$ /assets/static/$1 [L]
